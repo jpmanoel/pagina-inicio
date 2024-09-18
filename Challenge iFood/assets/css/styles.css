@@ -1,0 +1,387 @@
+/* Formatação inicio */ 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+/* Formatação fim */ 
+
+
+/* Cor de fundo inicio */ 
+body {
+    background-color: #FFFFFF;
+}
+/* Cor de fundo fim */
+
+
+/* Cabeçalho inicio */
+.interface {
+    max-width: 1280px;
+    margin: 0 20px;
+}
+
+header {
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 2px solid #e0e0e0; /* Adiciona uma linha na parte inferior */
+}
+
+header .interface{
+    display: flex;
+    align-items: center;
+
+}
+
+header .logoifood img{
+    max-width: 65px;
+    margin: 0 15px;
+}
+
+header .menu_padrao nav ul{
+    list-style-type: none;
+}
+
+.menu_padrao nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu_padrao nav ul li a{
+    color: #767171;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu_padrao nav ul li a:hover{
+    color: #ED1722
+}
+
+.menu_padrao nav ul li.link-vermelho > a {
+    color: #ED1722 !important;
+}
+/* Cabeçalho fim */
+
+
+/* Titulo inicio */
+.visao-geral {
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #ED1722;
+}
+/* Titulo */
+
+
+/* BOX MÃE inicio */
+.pagina {
+    margin: 20px;
+}
+/* BOX MÃE fim */
+
+
+/* Lados */
+.lado-esquerdo {
+    width: 50%; /* 50% da largura da tela */
+    height: 100%;      /* Altura total da tela */
+    position: absolute; /* Para fixar no lado esquerdo */
+    left: 0; /* Para alinhar ao lado esquerdo */
+    box-sizing: border-box; /* Garante que o padding e borda sejam incluídos na largura */
+}
+
+.lado-direito {
+    width: 50%; /* 50% da largura da tela */
+    height: 100%;      /* Altura total da tela */
+    position: absolute; /* Para fixar no lado direito */
+    right: 0; /* Para alinhar ao lado direito */
+    box-sizing: border-box; /* Garante que o padding e borda sejam incluídos na largura */
+}
+/* Lados */
+
+
+
+/* Caixa esquerda inicio */
+
+/* Saldo total inicio */
+.saldo-total {
+    margin-left: 80px;
+    width: 87%;
+    height: 250px;
+    background-color: white; 
+    padding: auto;  
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 14px; 
+}
+
+.saldo-total h3 {   /*Saldo total*/
+    font-size: 25px;              
+    margin-left: 20px;
+    
+    color: #767171;
+}
+
+.saldo-total h1 {
+    font-size: 45px;
+    text-align: left;
+    color: #ED1722;
+    margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.saldo-total a {
+    color: #ED1722;
+    margin-left: 600px;
+    cursor: pointer;
+}
+
+/* Saldo total fim */
+
+
+/* Grafico inicio */
+.grafico-mes {
+    margin-top: 15px;
+    margin-left: 80px;
+    width: 87%;
+    height: 450px;
+    position: relative;
+    background-color: white;
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 14px;
+}
+
+.grafico-mes h3 {
+    font-size: 25px;
+    margin-left: 20px;
+    color: #767171;
+}
+
+/* Grafico fim */
+
+/* Caixa esquerda fim */
+
+
+
+/* Caixa direita inicio */
+
+/* Itens mais vendidos inicio */
+.itens-mais-vendidos {
+    margin-right: 80px;
+    width: 87%;
+    height: 250px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 14px; 
+}
+
+.imv {
+    margin-left: 20px;
+}
+
+.cerveja {
+    margin-top: 0;
+}
+
+.primeira { /*produto*/
+    margin-top: 15px;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+.segunda { /*produto*/
+    margin-top: 15px;
+    margin-left: 19px;
+    list-style-type: none;
+}
+
+.terceira { /*produto*/
+    margin-top: 15px;
+    margin-left: 11px;
+    list-style-type: none;
+}
+
+.heineken-1{ /*div*/
+    margin-left: 40px;
+    width: 90%;
+    position: relative;
+    background-color: rgb(241, 240, 240);
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
+}
+
+.coca-2{ /*div*/
+    margin-left: 40px;
+    width: 90%;
+    position: relative;
+    background-color: rgb(241, 240, 240);
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
+}
+
+.doritos-3{ /*div*/
+    margin-left: 40px;
+    width: 90%;
+    position: relative;
+    background-color: rgb(241, 240, 240);
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
+}
+
+.itens-mais-vendidos h2 {
+    color: #767171;
+}
+
+.Heineken {
+    width: 45px;  /* Ajuste o tamanho da imagem aqui */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Canto levemente arredondado */
+}
+
+.coca-cola {
+    width: 30px;  /* Ajuste o tamanho da imagem aqui */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Canto levemente arredondado */
+}
+
+.doritos {
+    width: 45px;  /* Ajuste o tamanho da imagem aqui */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Canto levemente arredondado */
+}
+
+.preco-1 {
+    margin-left: 250px;
+}
+
+.preco-2 {
+    margin-left: 355px;
+}
+
+.preco-3 {
+    margin-left: 119px;
+
+}
+/* Itens mais vendidos fim */
+
+/* Pop up inicio */
+.pop-up {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%; 
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.receita-diaria {
+    width: 300px;
+    margin-left: 0px;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Cria a sombra */
+    border-radius: 14px; /*curvatura da borda*/
+}
+
+.rd-green{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.receita-diaria h2 {    
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 30px;
+    color: #0a7b64;
+}
+
+.receita-estimada {
+    margin-left: 120px;
+    margin-right: 30px;
+    width: 90%;
+    position: relative;
+    background-color: white;
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 14px; 
+}
+
+.re-yellow {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.atg {
+    margin-top: 3px;
+    margin-left: 28px;
+}
+
+.receita-estimada h2 {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 4px;
+    color: gold;
+}
+
+.pedidos-cancelados {
+    margin-left: 19%;
+    margin-right: 0px;
+    width: 70%;
+    position: relative;
+    background-color: white;
+    padding: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); 
+    border-radius: 14px; 
+}
+
+.pc-red {
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.pedidos-cancelados h2 {
+    width: 180px;
+    margin-left: 35%;
+    margin-right: 30px;
+    margin-top: 4px;
+    color: #ED1722;
+}
+/* Pop up fim */
+
+
+/* Grafico inicio */
+.grafico-pizza {
+    width: 87%;
+    height: 295px;
+    margin-right: 80px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Cria a sombra */
+    border-radius: 14px; /*curvatura da borda*/
+}
+
+
+
+.graficotaxa {
+    width: 100%;
+    height: 105%;
+    margin-left: 20%;
+}
+
+
+.graficoBarras {
+    width: 100%;
+    height: 80%;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+/* Grafico fim */
+
+
+/* Caixa direita fim */

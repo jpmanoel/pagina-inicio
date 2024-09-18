@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backoffice</title>
+    
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="icon" href="./assets/imagens/image 5 (1).png" type="imagelogo">
+
+    <style>
+        canvas {
+            border-radius: 10px; /* Adiciona border-radius ao canvas */
+        }
+    </style>
+</head>
+<body>
+<!--Cabeçalho inicio-->
+    <header>
+        <div class="interface">
+            <section class="logoifood">
+                <img src="./assets/imagens/ifood logo.png" alt="logo">
+            </section>
+            
+            <section class="menu_padrao">
+                <nav>
+                    <ul>
+                        <li class="link-vermelho"><a href="#">Início</a></li>
+                        <li><a href="#">Analítico</a></li>
+                        <li><a href="#">Mapa</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </header>
+<!--Cabeçalho fim -->
+
+<!--Titulo-->
+    <div class="visao-geral">
+        <h2>Visão Geral</h2>
+    </div>
+<!--Titulo-->
+
+<!--BOX MÃE inicio-->
+    <div class="pagina">
+<!--BOX MÃE fim-->
+
+<!--ESQUERDA inicio-->
+            <div class="lado-esquerdo"> <!-- Caixa esquerda começo-->
+                <div class="saldo-total"> <!--Fim saldo total-->
+                    <h3>Saldo Total</h3>
+                    <h1>R$463.722,12</h1>
+                    <a href="#">Veja mais</a>
+                </div>  <!--Fim saldo total-->
+            
+
+                <div class="grafico-mes">
+
+                    <h3>Vendas mensais</h3>
+                    <div class="graficoBarras">
+                        <canvas id="graficoBarras"></canvas> <!-- Adicionando o canvas para o gráfico de barras -->
+                    </div>
+                    
+                    <script>
+                        // Configuração do gráfico de barras
+                        const configBarras = {
+                            type: 'bar',
+                            data: {
+                                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set'],
+                                datasets: [{
+                                    label: 'Dataset 1',
+                                    data: [4, 6, 5, 8, 9, 9, 16, 13, 15],
+                                    backgroundColor: '#FF0000',
+                                    borderWidth: 0,
+                                    borderRadius: 10
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                plugins: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    title: {
+                                        display: true,
+                                    }
+                                },
+                                scales: {
+                                    x: {
+                                        beginAtZero: true,
+                                        barPercentage: 0.3, // Ajuste para controlar a largura das barras
+                                        categoryPercentage: 0., // Ajuste para controlar o espaçamento
+                                        grid: {
+                                            display: false
+                                        }
+                                    },
+                                    y: {
+                                        beginAtZero: true,
+                                        ticks: {
+                                            display: false
+                                        },
+                                        grid: {
+                                            display: false
+                                        }
+                                    }
+                                }
+                            },
+                        };
+                    
+                        // Criar o gráfico de barras
+                        const ctxBarras = document.getElementById('graficoBarras').getContext('2d');
+                        new Chart(ctxBarras, configBarras);
+                    </script>
+                    
+                </div>
+            </div> <!--Caixa esquerda fim-->
+<!--ESQUERDA fim-->
+        
+<!--DIREITA inicio-->
+    <div class="lado-direito"> <!--Caixa deireita inicio-->
+            
+        <div class="itens-mais-vendidos"> <!--itens vendidios inicio-->
+
+            <h2 class="imv">Itens mais vendidos</h2> 
+
+            <div class="heineken-1"> <!--heineken inicio-->
+                <li class="primeira">
+                    <img class="Heineken" src="./assets/imagens/heineken(2).png" alt="">
+                    <span class="cerveja">Cerveja Puro Malte Heineken 269ml</span>
+                    <span class="preco-1">R$4,98</span>
+                </li>
+            </div> <!--heineken fim-->
+
+            <div class="coca-2"> <!--Coca inicio-->
+                <li class="segunda">
+                    <img class="coca-cola" src="./assets/imagens/Coca-Cola.png" alt="">
+                    <span class="refrigerante">Coca-Cola Original 2L</span>
+                    <span class="preco-2">R$7,84</span>
+                </li>
+            </div> <!--Coca fim-->
+
+            <div class="doritos-3"> <!--Doritos inicio-->
+                <li class="terceira">
+                    <img class="doritos" src="./assets/imagens/Doritos.png" alt="">
+                    <span class="salgadinho">Salgadinho de Milho sabor Queijo Nacho Doritos 120g</span>
+                    <span class="preco-3">R$5,69</span>
+                </li>
+            </div> <!--Doritos fim-->
+
+        </div> <!--itens vendidios fim-->
+        
+
+        <div class="pop-up">
+            
+            <div class="receita-diaria"> <!--Receita diaria inicio-->
+                <h3 class="rd-green">Receita Diária</h3>
+                <h2>R$5.142,37</h2>
+            </div> <!--Receita diaria fim-->
+
+            <div class="receita-estimada"> <!--Receita estimada inicio-->
+                <h3 class="re-yellow">Receita Estimada</h3>
+                <p class="atg">Atualizado agora</p>
+                <h2>R$12.597,62</h2>
+            </div> <!--Receita diaria fim-->
+
+            <div class="pedidos-cancelados"> <!--Pedidos cancelados inicio-->
+                <h3 class="pc-red">Pedidos Cancelados</h3>
+                <p class="atg">Atualizado agora</p>
+                <h2>17</h2>
+            </div> <!--Pedidos cancelados fim-->
+
+        </div> <!--Pop up fim-->
+            
+        <div class="grafico-pizza"> <!--Grafico inicio-->
+
+            <div class="graficotaxa">
+                <canvas class="gastos" id="gastos"></canvas>
+            </div>
+            
+            <script>
+                // Configuração do gráfico de pizza
+                const configPizza = {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Taxa de Entrega 48,3%', 'Taxa iFood 24,9%', 'Insumos 26,8%'],
+                        datasets: [{
+                            data: [48.3, 24.9, 26.8], // Valores que você definiu
+                            backgroundColor: ['#FECF30', '#FF3030', '#198E72'],
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'left',
+                                    margin: '10px' // Remover a legenda
+                            },
+                            title: {
+                                display: false,
+                            }
+                        }
+                    },
+                };
+                
+                // Criar o gráfico de pizza
+                const ctxPizza = document.getElementById('gastos').getContext('2d');
+                new Chart(ctxPizza, configPizza);
+            </script>
+        </div> <!--Grafico fim-->
+            
+    </div> <!--Caixa deireita fim-->
+<!--DIREITA fim-->
+</body>
+</html>
